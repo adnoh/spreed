@@ -407,7 +407,7 @@ class SignalingController extends OCSController {
 			if (!empty($userId)) {
 				$room->leaveRoom($userId);
 			} else if (!empty($participant)) {
-				$room->removeParticipantBySession($participant);
+				$room->removeParticipantBySession($participant, 'leave');
 			}
 		}
 
